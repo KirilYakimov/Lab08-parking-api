@@ -55,7 +55,7 @@ class ParkingLotController extends Controller
         $validator = Validator::make($request->all(), [
             'address' => ['required', 'string'],
             'space' =>  ['required', 'numeric', 'between:1,1000000'],
-            'timezone' => ['required', 'string'],
+            'timezone' => ['required', 'timezone'],
             'currency' => ['required', 'string']
         ]);
         if ($validator->fails()) {
@@ -104,7 +104,7 @@ class ParkingLotController extends Controller
         $validator = Validator::make($request->all(), [
             'address' => ['required', 'string'],
             'space' =>  ['required', 'numeric', 'between:1,1000000'],
-            'timezone' => ['required', 'string'],
+            'timezone' => ['required', 'timezone'],
             'currency' => ['required', 'string']
         ]);
         if ($validator->fails()) {
