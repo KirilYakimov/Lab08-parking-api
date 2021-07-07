@@ -3,6 +3,18 @@
 Vehicle exiting and geting vechicle current exit price is only available for vehicles in the parking.
 All datetime in the databese are saved in utc timezone and for the calculations are adjusted to the timezone of the parking lot.
 
+To change the entered date of the vehicle you can use update endpoint for that. 
+```
+"brand": "Audi", // required
+"registration_plate": "СВ0077MM", // required
+"vehicle_type_id": 1, // required
+"card_id": 3 // not required
+// Time in parking lot timezone, it will be converted to utc for the database
+"entered_at": "2021-07-01 00:00:00" // date_format Y-d-m H:i:s
+```
+
+There is a database diagram in the project.
+
 ## Configure
 
 Install dependancies from `composer.json`:
